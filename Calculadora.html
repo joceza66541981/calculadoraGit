@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="display" id="screen-container">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+
+       
+            <div class="row">
+                <button class="number" onclick="clearAll()">AC</button>
+                <button class="number" onclick="clearScreen()">CE</button>
+                <button class="number" onclick="appendText('+')">+</button>
+            
+            </div>
+            <div class="row">
+                <button class="number" onclick="appendText('-')">-</button>
+                <button class="number" onclick="appendText('/')">÷</button>
+                <button class="number" onclick="appendText('*')">x</button>
+            </div>
+            <div class="row">
+                <button class="number" onclick="appendNumber(7)">7</button>
+                <button class="number" onclick="appendNumber(8)">8</button>
+                <button class="number" onclick="appendNumber(9)">9</button>
+            </div>
+            <div class="row">
+                <button class="number" onclick="appendNumber(4)">4</button>
+                <button class="number" onclick="appendNumber(5)">5</button>
+                <button class="number" onclick="appendNumber(6)">6</button>
+            </div>
+            <div class="row">
+                <button class="number" onclick="appendNumber(1)">1</button>
+                <button class="number" onclick="appendNumber(2)">2</button>
+                <button class="number" onclick="appendNumber(3)">3</button>
+            </div>
+            <div class="row">
+                <button class="number" onclick="appendNumber(0)">0</button>
+                <button class="number" onclick="appendDecimal()">.</button>
+                <button class="equal" onclick="calculate()">=</button>
+            </div>
+        
+        <div class="row">
+            <button class="special" onclick="calculateTrig('sin')">sin</button>
+            <button class="special" onclick="calculateTrig('cos')">cos</button>
+            <button class="special" onclick="calculateTrig('tan')">tan</button>
+        </div>
+        <div class="row">
+            <button class="special" onclick="calculateInverseTrig('sin')">sin⁻¹</button>
+            <button class="special" onclick="calculateInverseTrig('cos')">cos⁻¹</button>
+            <button class="special" onclick="calculateInverseTrig('tan')">tan⁻¹</button>
+        </div>
+
+        <div class="row">
+            <button class="special" onclick="calculatePercentage()">%</button>
+            <button class="special" onclick="calculateLog()">ln</button>
+            <button class="special" onclick="insertPI()">π</button>
+        </div>
+
+        <div class="row">
+            <button class="special" onclick="calculateFactorial()">x!</button>
+                <button class="special" onclick="appendText('(')">()</button>
+                <button class="special" onclick="changeSign()">+/-</button>
+        </div>
+      
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
